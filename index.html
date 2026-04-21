@@ -1,11 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>L2 Games FMP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2 Games FMP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2a1a5e, #1e3c72);
+            color: #ffffff;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 12px;
+            text-align: center;
+        }
+        nav a {
+            color: #cbb3ff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+        h2 {
+            color: #cbb3ff;
+        }
+        .image-container {
+            margin-top: 15px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+}
 
-<style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -115,22 +178,44 @@ footer {
     font-family: monospace;
     font-size: 12px;
 }
-</style>
+        
+    </style>
 </head>
-
 <body>
 
 <header>
     <h1>L2 Games FMP Website</h1>
+    <p>My Final Major Project</p>
 </header>
 
 <nav>
+    <a href="#planning">Planning</a>
     <a href="#research">Research</a>
+    <a href="#extras">Extras</a>
+    <a href="#obs">OBS</a>
+    <a href="#testplan">Test Plan / Reflective Log</a>
+    <a href="#evaluation">Evaluation</a>
 </nav>
+
+<section id="planning">
+    <h2>Planning</h2>
+    <p>FMP – Proposal – What are you going to create?</p>
+    <p>For my FMP I want to make a Valorant based map as it has a simple design with detail as I don’t want the map to be confusing at all, I just want it to be detailed so it has a nice feel to it. I am trying to achieve a simple yet detailed map with the map being small but I want it to be detailed. This is because I want a map that is on the smaller side with a bigger attention to the texture, detail and mechanics of the objects around. With this I am trying to achieve a small yet detailed map that you can play against a bot. It will have a few mechanics like running, crouching, shooting aiming, throwable items e.g. grenades Molotov. The maps themselves are basically square, but they have secret passages interiors for buildings so that players can go into them. This makes the maps more unique. I want players to have a lot of room to explore the map and a lot of ability. For my map I'm going with the same square map design, but I'm going to make the interiors different and unique to my game to bring a new area for the players to explore.</p>  
+    <p>FMP – Reasoning – Why are you going to create this?</p> 
+    <p>I am choosing this as I love Valorant and the game might be simple to the eye but there is a big complexity behind it, making it a really good game. The maps are somewhat smaller than some games, but they are detailed from the textures to the props inside of them.
+I am choosing Valorant as I love the game and it’s one of the more unique games I have played as it brings it’s own mechanics to the game. I am going to use my skills from blender to make the prop assets ensuring that they include detail per one I am going to use my coding skills to make a funcining game start count down and potential either ai opnent or multiplayer function or both. To make this more intresting for the player but my main focus is the map.</p>
+    <div class="image-container">
+        <img src="images/Screenshot 2026-03-23 133234.png" alt="Planning Image">
+    </div>
+    <p>FMP – Further Planning Documentation – Personal Planning</p>
+    <p>For my further planning I am going to look more in depth into games like Valorant to gather detail and research about similar games I am also going to make a Microsoft form to ask people what they preferer to see within the map as this gives my game a community based impact.</p>
+</section>
 
 <section id="research">
     <h2>Research</h2>
-
+    <p>Add your research findings here.</p>
+   <!-- From Uiverse.io by mrhyddenn --> 
+<div class="container">
     <div class="container">
         <div class="terminal_toolbar">
             <div class="butt">
@@ -143,7 +228,7 @@ footer {
 
         <div class="terminal_body">
             <video id="player" class="terminal_video" controls>
-                <source src="your-video.mp4" type="video/mp4">
+                <source src="reserch1.mp4" type="video/mp4">
             </video>
 
             <div id="loadingText" class="terminal_overlay">
@@ -151,14 +236,48 @@ footer {
             </div>
         </div>
     </div>
+    <div class="image-container">
+        <img src="images/research1.png" alt="Research Image">
+    </div>
+</section>
 
+<section id="extras">
+    <h2>Extras</h2>
+    <p>Include any additional content here.</p>
+    <div class="image-container">
+        <img src="images/extras1.png" alt="Extras Image">
+    </div>
+</section>
+
+<section id="obs">
+    <h2>OBS</h2>
+    <p>Document your OBS recordings or notes here.</p>
+    <div class="image-container">
+        <img src="images/obs1.png" alt="OBS Image">
+    </div>
+</section>
+
+<section id="testplan">
+    <h2>Test Plan / Reflective Log</h2>
+    <p>Detail your testing process and reflections here.</p>
+    <div class="image-container">
+        <img src="images/testplan1.png" alt="Test Plan Image">
+    </div>
+</section>
+
+<section id="evaluation">
+    <h2>Evaluation</h2>
+    <p>Write your final evaluation here.</p>
+    <div class="image-container">
+        <img src="images/evaluation1.png" alt="Evaluation Image">
+    </div>
 </section>
 
 <footer>
     <p>&copy; 2026 L2 Games FMP</p>
 </footer>
 
-<script>
+    <script>
 const video = document.getElementById("player");
 const loadingText = document.getElementById("loadingText");
 
