@@ -1,292 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2 Games FMP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2a1a5e, #1e3c72);
-            color: #ffffff;
-        }
-        header {
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            backdrop-filter: blur(5px);
-        }
-        nav {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 12px;
-            text-align: center;
-        }
-        nav a {
-            color: #cbb3ff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.3);
-        }
-        h2 {
-            color: #cbb3ff;
-        }
-        .image-container {
-            margin-top: 15px;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .container {
-  width: 100%;
-  max-width: 500px;
-  height: 280px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L2 Games FMP</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2a1a5e, #1e3c72);
+    color: #ffffff;
 }
 
-/* From Uiverse.io by mrhyddenn */ 
+header {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: #cbb3ff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* TERMINAL */
 .container {
-  width: 230px;
-  height: 194px;
+    width: 230px;
+    height: 194px;
 }
 
 .terminal_toolbar {
-  display: flex;
-  height: 30px;
-  align-items: center;
-  padding: 0 8px;
-  box-sizing: border-box;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: linear-gradient(#504b45 0%, #3c3b37 100%);
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding: 0 8px;
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(#504b45, #3c3b37);
 }
 
 .butt {
-  display: flex;
-  align-items: center;
+    display: flex;
 }
 
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin-right: 5px;
-  font-size: 8px;
-  height: 12px;
-  width: 12px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 100%;
-  background: linear-gradient(#7d7871 0%, #595953 100%);
-  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
-  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: none;
+    background: #777;
 }
 
 .btn-color {
-  background: #ee411a;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.butt--exit {
-  background: linear-gradient(#f37458 0%, #de4c12 100%);
+    background: #ee411a;
 }
 
 .user {
-  color: #d5d0ce;
-  margin-left: 6px;
-  font-size: 14px;
-  line-height: 15px;
+    color: #d5d0ce;
+    margin-left: 8px;
+    font-size: 14px;
 }
 
 .terminal_body {
-  background: rgba(56, 4, 40, 0.9);
-  height: calc(100% - 30px);
-  padding-top: 2px;
-  margin-top: -1px;
-  font-size: 12px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+    background: rgba(56, 4, 40, 0.9);
+    height: calc(100% - 30px);
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    overflow: hidden;
 }
 
-.terminal_promt {
-  display: flex;
+/* VIDEO */
+.terminal_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.terminal_promt span {
-  margin-left: 4px;
+/* LOADING TEXT */
+.terminal_overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #7eda28;
+    font-family: monospace;
+    font-size: 12px;
 }
-
-.terminal_user {
-  color: #7eda28;
-}
-
-.terminal_location {
-  color: #4878c0;
-}
-
-.terminal_bling {
-  color: #dddddd;
-}
-
-.terminal_cursor {
-  display: block;
-  height: 14px;
-  width: 5px;
-  margin-left: 10px;
-  animation: curbl 1200ms linear infinite;
-}
-
-@keyframes curbl {
-  
-  0% {
-    background: #ffffff;
-  }
-
-  49% {
-    background: #ffffff;
-  }
-
-  60% {
-    background: transparent;
-  }
-
-  99% {
-    background: transparent;
-  }
-
-  100% {
-    background: #ffffff;
-  }
-} 
-        
-    </style>
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>L2 Games FMP Website</h1>
-    <p>My Final Major Project</p>
 </header>
 
 <nav>
-    <a href="#planning">Planning</a>
     <a href="#research">Research</a>
-    <a href="#extras">Extras</a>
-    <a href="#obs">OBS</a>
-    <a href="#testplan">Test Plan / Reflective Log</a>
-    <a href="#evaluation">Evaluation</a>
 </nav>
-
-<section id="planning">
-    <h2>Planning</h2>
-    <p>FMP – Proposal – What are you going to create?</p>
-    <p>For my FMP I want to make a Valorant based map as it has a simple design with detail as I don’t want the map to be confusing at all, I just want it to be detailed so it has a nice feel to it. I am trying to achieve a simple yet detailed map with the map being small but I want it to be detailed. This is because I want a map that is on the smaller side with a bigger attention to the texture, detail and mechanics of the objects around. With this I am trying to achieve a small yet detailed map that you can play against a bot. It will have a few mechanics like running, crouching, shooting aiming, throwable items e.g. grenades Molotov. The maps themselves are basically square, but they have secret passages interiors for buildings so that players can go into them. This makes the maps more unique. I want players to have a lot of room to explore the map and a lot of ability. For my map I'm going with the same square map design, but I'm going to make the interiors different and unique to my game to bring a new area for the players to explore.</p>  
-    <p>FMP – Reasoning – Why are you going to create this?</p> 
-    <p>I am choosing this as I love Valorant and the game might be simple to the eye but there is a big complexity behind it, making it a really good game. The maps are somewhat smaller than some games, but they are detailed from the textures to the props inside of them.
-I am choosing Valorant as I love the game and it’s one of the more unique games I have played as it brings it’s own mechanics to the game. I am going to use my skills from blender to make the prop assets ensuring that they include detail per one I am going to use my coding skills to make a funcining game start count down and potential either ai opnent or multiplayer function or both. To make this more intresting for the player but my main focus is the map.</p>
-    <div class="image-container">
-        <img src="images/Screenshot 2026-03-23 133234.png" alt="Planning Image">
-    </div>
-    <p>FMP – Further Planning Documentation – Personal Planning</p>
-    <p>For my further planning I am going to look more in depth into games like Valorant to gather detail and research about similar games I am also going to make a Microsoft form to ask people what they preferer to see within the map as this gives my game a community based impact.</p>
-</section>
 
 <section id="research">
     <h2>Research</h2>
-    <p>Add your research findings here.</p>
-   <!-- From Uiverse.io by mrhyddenn --> 
-<div class="container">
-    <div class="container_terminal"></div>
-    <div class="terminal_toolbar">
-        <div class="butt">
-            <button class="btn btn-color"></button>
-            <button class="btn"></button>
-            <button class="btn"></button>
+
+    <div class="container">
+        <div class="terminal_toolbar">
+            <div class="butt">
+                <button class="btn btn-color"></button>
+                <button class="btn"></button>
+                <button class="btn"></button>
+            </div>
+            <p class="user">johndoe@admin: ~</p>
         </div>
-        <p class="user">johndoe@admin: ~</p>
-    </div>
-    <div class="terminal_body">
-        <div class="terminal_promt">
-            <span class="terminal_user">johndoe@admin:</span>
-            <span class="terminal_location">~</span>
-            <span class="terminal_bling">$</span>
-            <span class="terminal_cursor"></span>
+
+        <div class="terminal_body">
+            <video id="player" class="terminal_video" controls>
+                <source src="your-video.mp4" type="video/mp4">
+            </video>
+
+            <div id="loadingText" class="terminal_overlay">
+                johndoe@admin:~$ loading video...
+            </div>
         </div>
     </div>
-</div>
-    <div class="image-container">
-        <img src="images/research1.png" alt="Research Image">
-    </div>
-</section>
 
-<section id="extras">
-    <h2>Extras</h2>
-    <p>Include any additional content here.</p>
-    <div class="image-container">
-        <img src="images/extras1.png" alt="Extras Image">
-    </div>
-</section>
-
-<section id="obs">
-    <h2>OBS</h2>
-    <p>Document your OBS recordings or notes here.</p>
-    <div class="image-container">
-        <img src="images/obs1.png" alt="OBS Image">
-    </div>
-</section>
-
-<section id="testplan">
-    <h2>Test Plan / Reflective Log</h2>
-    <p>Detail your testing process and reflections here.</p>
-    <div class="image-container">
-        <img src="images/testplan1.png" alt="Test Plan Image">
-    </div>
-</section>
-
-<section id="evaluation">
-    <h2>Evaluation</h2>
-    <p>Write your final evaluation here.</p>
-    <div class="image-container">
-        <img src="images/evaluation1.png" alt="Evaluation Image">
-    </div>
 </section>
 
 <footer>
     <p>&copy; 2026 L2 Games FMP</p>
 </footer>
+
+<script>
+const video = document.getElementById("player");
+const loadingText = document.getElementById("loadingText");
+
+video.addEventListener("canplay", () => {
+    loadingText.innerText = "johndoe@admin:~$ ready ✔";
+
+    setTimeout(() => {
+        loadingText.style.display = "none";
+    }, 2000);
+});
+</script>
 
 </body>
 </html>
